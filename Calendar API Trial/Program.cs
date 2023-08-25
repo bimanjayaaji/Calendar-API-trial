@@ -7,127 +7,57 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace CalendarQuickstart
+namespace CalendarAPI;
+
+class Program
 {
-	class Program
+	static void Main(string[] args)
 	{
-		static void Main(string[] args)
-		{
-			string jsonFile = "radiant-moon-397006-3cea0ce46a64.json";
-			string calendarId = @"244818f2ae9e65049c4ed3bd40744291d1aa439fa6377a0403b6f406831adc6d@group.calendar.google.com";
+		ServiceAccountCredential credential = ServiceAccount.GenerateCredential();
+		CalendarService service = CalendarManager.GenerateService(credential);
 
-			string[] Scopes = { CalendarService.Scope.Calendar };
+		Calendar calendar = CalendarManager.GenerateCalendar(service,Rooms.GetRoomLink(1));
+		Events events = CalendarManager.MakeRequest(service, calendar);
+		List<Event> allEvents = CalendarManager.GetEventList(events);
+		
+		CalendarManager.ListingEvents(allEvents);
+		Console.Read();
 
-			ServiceAccountCredential credential;
+		var startDate = new DateTime(2023, 08, 26, 15, 30, 0);
+		var endDate = new DateTime(2023, 08, 26, 16, 30, 0);
+		
+		// string startRCF = startDate.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
+		string startRCF = startDate.ToString("yyyy-MM-ddTHH:mm:ss.fffZ", System.Globalization.DateTimeFormatInfo.InvariantInfo);
+		Console.WriteLine(startRCF);
+		// string endRCF = endDate.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
+		string endRCF = endDate.ToString("yyyy-MM-ddTHH:mm:ss.fffZ", System.Globalization.DateTimeFormatInfo.InvariantInfo);
+		Console.WriteLine(endRCF);
 
-			using (var stream =
-				new FileStream(jsonFile, FileMode.Open, FileAccess.Read))
+		CalendarManager.CreateEvent(
+			service,
+			calendar,
+			"Bootcamp Formulatrix Batch 3",
+			"Salatiga",
+			"Learning about .NET framework",
+			new EventDateTime()
 			{
-				var confg = Google.Apis.Json.NewtonsoftJsonSerializer.Instance.Deserialize<JsonCredentialParameters>(stream);
-				credential = new ServiceAccountCredential(
-				   new ServiceAccountCredential.Initializer(confg.ClientEmail)
-				   {
-					   Scopes = Scopes
-				   }.FromPrivateKey(confg.PrivateKey));
+				// DateTimeDateTimeOffset = new DateTime(2023, 08, 26, 15, 30, 0),
+				// DateTimeRaw = "2023-08-26T14:30:00.000Z",
+				DateTimeRaw = startRCF,
+				TimeZone = "Asia/Jakarta"
+			},
+			new EventDateTime()
+			{
+				// DateTimeDateTimeOffset = new DateTime(2023, 08, 26, 16, 30, 0),
+				// DateTimeRaw = "2023-08-26T15:30:00.000Z",
+				DateTimeRaw = endRCF,
+				TimeZone = "Asia/Jakarta"
 			}
-
-			var service = new CalendarService(new BaseClientService.Initializer()
-			{
-				HttpClientInitializer = credential,
-				ApplicationName = "Calendar API Sample",
-			});
-
-			var calendar = service.Calendars.Get(calendarId).Execute();
-			Console.WriteLine("Calendar Name :");
-			Console.WriteLine(calendar.Summary);
-
-			Console.WriteLine("click for more .. ");
-			Console.Read();
-
-
-			// Define parameters of request.
-			EventsResource.ListRequest listRequest = service.Events.List(calendarId);
-			listRequest.TimeMin = DateTime.Now;
-			listRequest.ShowDeleted = false;
-			listRequest.SingleEvents = true;
-			listRequest.MaxResults = 10;
-			listRequest.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
-
-			// List events.
-			Events events = listRequest.Execute();
-			Console.WriteLine("Upcoming events:");
-			if (events.Items != null && events.Items.Count > 0)
-			{
-				foreach (var eventItem in events.Items)
-				{
-					string when = eventItem.Start.DateTimeDateTimeOffset.ToString();
-					if (String.IsNullOrEmpty(when))
-					{
-						when = eventItem.Start.Date;
-					}
-					Console.WriteLine("{0} ({1})", eventItem.Summary, when);
-				}
-			}
-			else
-			{
-				Console.WriteLine("No upcoming events found.");
-			}
-			Console.WriteLine("click for more .. ");
-			Console.Read();
-
-			var myevent = DB.Find(x => x.Id == "eventid" + 1);
-
-			var InsertRequest = service.Events.Insert(myevent, calendarId);
-
-			try
-			{
-				
-				InsertRequest.Execute();
-			}
-			catch (Exception ex)
-			{
-				Console.WriteLine(ex.Message);
-				try
-				{
-					service.Events.Update(myevent, calendarId, myevent.Id).Execute();
-					Console.WriteLine("Insert/Update new Event ");
-					Console.Read();
-
-				}
-				catch (Exception ex2)
-				{
-					Console.WriteLine(ex2.Message);
-					Console.WriteLine("can't Insert/Update new Event ");
-
-				}
-			}
-		}
-
-
-		static List<Event> DB =
-			 new List<Event>() {
-				new Event(){
-					Id = "eventid" + 1,
-					Summary = "Google I/O 2015",
-					Location = "800 Howard St., San Francisco, CA 94103",
-					Description = "A chance to hear more about Google's developer products.",
-					Start = new EventDateTime()
-					{
-						DateTimeDateTimeOffset = new DateTime(2023, 08, 26, 15, 30, 0),
-						TimeZone = "GMT+7",
-					},
-					End = new EventDateTime()
-					{
-						DateTimeDateTimeOffset = new DateTime(2023, 08, 27, 15, 30, 0),
-						TimeZone = "GMT+7",
-					},
-					Recurrence = new List<string> { "RRULE:FREQ=DAILY;COUNT=2" },
-					Attendees = new List<EventAttendee>
-					{
-						// new EventAttendee() { Email = "lpage@example.com"},
-						new EventAttendee() { Email = "anjay4705@gmail.com"}
-					}
-				}
-			 };
+		);
 	}
 }
+
+
+
+
+

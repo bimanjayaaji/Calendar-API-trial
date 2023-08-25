@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Learner\\000 Work\\230609 Formulatrix Bootcamp\\Calendar API trial\\Calendar API Trial\\Calendar API Trial.csproj": {}
+    "D:\\Learner\\000 Work\\230609 Formulatrix Bootcamp\\Calendar API trial\\Calendar API Trial\\Calendar API Trial.csproj": {}
   },
   "projects": {
-    "d:\\Learner\\000 Work\\230609 Formulatrix Bootcamp\\Calendar API trial\\Calendar API Trial\\Calendar API Trial.csproj": {
+    "D:\\Learner\\000 Work\\230609 Formulatrix Bootcamp\\Calendar API trial\\Calendar API Trial\\Calendar API Trial.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Learner\\000 Work\\230609 Formulatrix Bootcamp\\Calendar API trial\\Calendar API Trial\\Calendar API Trial.csproj",
+        "projectUniqueName": "D:\\Learner\\000 Work\\230609 Formulatrix Bootcamp\\Calendar API trial\\Calendar API Trial\\Calendar API Trial.csproj",
         "projectName": "Calendar API Trial",
-        "projectPath": "d:\\Learner\\000 Work\\230609 Formulatrix Bootcamp\\Calendar API trial\\Calendar API Trial\\Calendar API Trial.csproj",
+        "projectPath": "D:\\Learner\\000 Work\\230609 Formulatrix Bootcamp\\Calendar API trial\\Calendar API Trial\\Calendar API Trial.csproj",
         "packagesPath": "C:\\Users\\S 410 UN\\.nuget\\packages\\",
-        "outputPath": "d:\\Learner\\000 Work\\230609 Formulatrix Bootcamp\\Calendar API trial\\Calendar API Trial\\obj\\",
+        "outputPath": "D:\\Learner\\000 Work\\230609 Formulatrix Bootcamp\\Calendar API trial\\Calendar API Trial\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\S 410 UN\\AppData\\Roaming\\NuGet\\NuGet.Config"
