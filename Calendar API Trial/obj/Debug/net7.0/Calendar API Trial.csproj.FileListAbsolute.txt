@@ -1,0 +1,22 @@
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\bin\Debug\net7.0\Calendar API Trial.exe
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\bin\Debug\net7.0\Calendar API Trial.deps.json
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\bin\Debug\net7.0\Calendar API Trial.runtimeconfig.json
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\bin\Debug\net7.0\Calendar API Trial.dll
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\bin\Debug\net7.0\Calendar API Trial.pdb
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\bin\Debug\net7.0\Google.Apis.dll
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\bin\Debug\net7.0\Google.Apis.Auth.PlatformServices.dll
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\bin\Debug\net7.0\Google.Apis.Auth.dll
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\bin\Debug\net7.0\Google.Apis.Calendar.v3.dll
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\bin\Debug\net7.0\Google.Apis.Core.dll
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\obj\Debug\net7.0\Calendar API Trial.csproj.AssemblyReference.cache
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\obj\Debug\net7.0\Calendar API Trial.GeneratedMSBuildEditorConfig.editorconfig
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\obj\Debug\net7.0\Calendar API Trial.AssemblyInfoInputs.cache
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\obj\Debug\net7.0\Calendar API Trial.AssemblyInfo.cs
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\obj\Debug\net7.0\Calendar API Trial.csproj.CoreCompileInputs.cache
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\obj\Debug\net7.0\Calendar API Trial.csproj.CopyComplete
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\obj\Debug\net7.0\Calendar API Trial.dll
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\obj\Debug\net7.0\refint\Calendar API Trial.dll
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\obj\Debug\net7.0\Calendar API Trial.pdb
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\obj\Debug\net7.0\Calendar API Trial.genruntimeconfig.cache
+D:\Learner\000 Work\230609 Formulatrix Bootcamp\Calendar API trial\Calendar API Trial\obj\Debug\net7.0\ref\Calendar API Trial.dll
